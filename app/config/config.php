@@ -7,7 +7,7 @@
  */
 define('APPROOT', dirname(dirname(__FILE__)));
 //defining the site url
-define('SITE_URL', 'http://localhost/SamFramework/');
+define('SITE_URL', 'http://localhost/FashionShop/');
 
 //defining the site name
 define('SITE_NAME', '');

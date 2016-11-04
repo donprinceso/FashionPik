@@ -1,39 +1,44 @@
 
     <header>
       <div class="navbar-fixed">
-        <nav class="navbar teal">
+        <nav class="navbar">
           <div class="nav-wrapper">
             <a href="#!" class="brand-logo white-text text-darken-4">Dashbaord</a>
             <ul id="nav-mobile" class="right">
-              <li class="hide-on-med-and-down"><a href="/products/admin">Buy Now!</a></li>
-              <li class="hide-on-med-and-down"><a href="#!" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
-              <li><a href="#!" data-target="dropdown" class="dropdown-trigger waves-effect"><i class="material-icons">settings</i></a></li>
+              <li class="hide-on-med-and-down"><a href="">Cart!</a></li>
+              <li class=""><a href="#!" data-target="dropdown1" class="dropdown-trigger waves-effect">
+              <?php echo $_SESSION['email']; ?>
+              </a></li>
+              <li><a class=' dropdown-trigger waves-effect' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
             </ul>
             <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
           </div>
         </nav>
       </div>
-      <ul id="sidenav-left" class="sidenav sidenav-fixed teal">
-        <li><a href="#" class="logo-container">Admin<i class="material-icons left">spa</i></a></li>
-        <li class="no-padding">
-        
-      </ul>
-
-      <div id="dropdown1" class="dropdown-content notifications">
-        <div class="notifications-title">notifications</div>
-        <div class="card">
-          <div class="card-content"><span class="card-title">Joe Smith made a purchase</span>
-            <p>Content</p>
-          </div>
-          <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
-        </div>
-        
-      </div>
-      <div id="dropdown" class="dropdown-content dropdown-tabbed">
-        <ul class="tabs tabs-fixed-width">
-          <li class="tab col s3"><a href="#">Chart</a></li>
-          <li class="tab col s3"><a href="#">Log out</a></li>
+      
+        <ul id="dropdown1" class=" dropdown-content">
+          <li class=""><a href="#">Account</a></li>
+          <li class=""><a href="#">Log out</a></li>
         </ul>
-        
-      </div>
+      
     </header>
+    <ul id="sidenav-left" class="sidenav sidenav-fixed teal">
+      <div class="container white-text">
+        <h4>Fashion Pik</h4>
+      </div>
+      <li><a href="#" class=" waves-effect white-text">Dashboard<i class="material-icons left">spa</i></a></li>
+      <li class="no-padding">
+        <ul>
+          <li><a class=" waves-effect white-text" href="#">Search<i class="material-icons left">spa</i></a>
+            
+          </li>
+          <li><a class=" waves-effect white-text dropdown-trigger select-dropdown" href="#">Transtions<i class="material-icons left">spa</i></a></li>
+          <li><a class=" waves-effect white-text dropdown-trigger select-dropdown" href="#"  data-target='dropdown2'>Shopping<i class="material-icons left">spa</i></a>
+            <ul id='dropdown2' class='dropdown-content'>
+            <li><a class=" waves-effect white-text" href="#">Man Shop<i class="material-icons left">spa</i></a></li>
+            </ul>
+          </li>
+          <li><a class=" waves-effect white-text" href="#">Account<i class="material-icons left">spa</i></a></li>
+        </ul>
+      </li>
+    </ul>

@@ -1,6 +1,6 @@
 <footer class="page-footer teal">
     <div class="row container">
-        <div class="col s12 m4 center-align">
+        <div class="col s12 l4 center-align">
             <h5 class="grey-text text-lighten-4"> Quick Links</h5>
             <ul>
                 <li>
@@ -20,7 +20,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col s12 m4 center-align">
+        <div class="col s12 l4 center-align">
         <h5 class="grey-text text-lighten-4">Join Us ON</h5>
             <div class="row">
                 <div class="col s12 m4">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4 center-align">
+        <div class="col s12 l4 center-align">
             <h5 class="grey-text text-lighten-4">Address Info</h5>
             <ul>
                 <li>

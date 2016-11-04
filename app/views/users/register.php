@@ -4,9 +4,11 @@
 <!-- linking the navbar -->
 <?php require_once APPROOT.'/views/Template/navgetation.php'; ?>
 <!-- End of the navbar -->
+<br>
 <div class="row container">
     <div class="card col s12 m6 l6 offset-m3 offset-l3">
             <h5 class="center-align teal white-text card-panel">Register</h5>
+            <br>
             <form action="<?php echo htmlspecialchars(SITE_URL.'users/register') ?>" method="post">
                 <div class="input-field">
                     <i class="material-icons prefix">account_circle</i> 

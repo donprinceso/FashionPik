@@ -1,11 +1,11 @@
-<?php require_once APPROOT.'/views/Template/header.php'; ?>
+<?php require_once APPROOT . '/views/Template/header.php';?>
 <title><?php echo SITE_NAME; ?></title>
-<?php require_once APPROOT.'/views/Template/headEnd.php'; ?>
+<?php require_once APPROOT . '/views/Template/headEnd.php';?>
 <!-- linking the navbar -->
-<?php require_once APPROOT.'/views/Template/navgetation.php'; ?>
+<?php require_once APPROOT . '/views/Template/navgetation.php';?>
 <!-- End of the navbar -->
 <!-- Slide View Link -->
-<?php require_once APPROOT.'/views/inc/slide.php'; ?>
+<?php require_once APPROOT . '/views/inc/slide.php';?>
 <!-- The make an order with us content -->
 <div class="container">
 <div class="centered center-align">
@@ -32,4 +32,4 @@
     <br>
 </div>
 </div>
-<?php require_once APPROOT.'/views/Template/footer.php'; ?>
+<?php require_once APPROOT . '/views/Template/footer.php';?>

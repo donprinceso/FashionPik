@@ -42,7 +42,7 @@ class Database{
     public function Fetch()
     {
         $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
     public function FetchAll()
