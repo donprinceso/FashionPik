@@ -18,11 +18,9 @@ class Pages extends Controller
         $this->Page = $this->model('Page');
     }
 
-    public function index($name)
+    public function index()
     {
-        $user = $this->Page;
-        $user->name = $name;
-        $this->view('home/index',['name' => $user->name]);
+        $this->view('home/index');
     }
 
     public function about()
@@ -30,4 +28,12 @@ class Pages extends Controller
         $this->view('home/about');
     }
 
+    public function contact()
+    {
+        $this->view('home/contact');
+    }
+    public function features()
+    {
+        $this->view('home/features');
+    }
 }

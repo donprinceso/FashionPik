@@ -12,9 +12,6 @@
  */
 class Page extends Database{
 
-   public function __construct() {
-      $this->connect();
-   }
     public $name;
     protected $tablename = "Pages";
 }

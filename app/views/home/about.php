@@ -1,14 +1,17 @@
-<?php require_once APPROOT.'/views/Layout/header.php'; ?>
-
-
-
-<div class="">
-    <div class="">
-        <h3 class="">The About Page</h3>
-        <p>
-            <a class="">Learn more</a>
-        </p>
+<?php require_once APPROOT.'/views/Template/header.php'; ?>
+<title><?php echo SITE_NAME; ?></title>
+<?php require_once APPROOT.'/views/Template/headEnd.php'; ?>
+<!-- linking the navbar -->
+<?php require_once APPROOT.'/views/Template/navgetation.php'; ?>
+<!-- End of the navbar -->
+<!-- Slide View Link -->
+<?php require_once APPROOT.'/views/inc/slide.php'; ?>
+<!-- The make an order with us content -->
+<div class="container">
+<div class="centered center-align">
+    <div class="title">
+        <h3>About Us</h3>
     </div>
 </div>
-
-<?php require_once APPROOT.'/views/Layout/footer.php'; ?>
+</div>
+<?php require_once APPROOT.'/views/Template/footer.php'; ?>
