@@ -79,7 +79,7 @@ class Users extends Controller
 
     public function login()
     {
-        if($_SERVER['REQUEST_METHOD']=='POST'){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
             $data = [
                 'email'=> trim($_POST['email']),
@@ -110,7 +110,8 @@ class Users extends Controller
             if($this->error == 0){
                 $request = $this->userModel->login($data);
                 if($request){
-                    $this->userSession($request);
+                    //$this->userSession($request);
+                    $this->view('users/index');
                 }else{
                     $data['password'] = 'Incorrect Both email and password';
                     $this->error = 1;
@@ -121,6 +122,8 @@ class Users extends Controller
             }
         }else{
             $data = [
+                'email' => '',
+                'password' => '',
                 'email_err' => '',
                 'password_err' => ''
             ];

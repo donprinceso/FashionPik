@@ -8,14 +8,18 @@
         <div class="row">
             <div class="card col s12 m6 l6 offset-m3 offset-l3">
                 <h5 class="center-align teal white-text card-panel">Login</h5>
-                <form action="<?php htmlentities(SITE_URL.'users/login');?>" method="post">
+                <form action="<?php htmlspecialchars(SITE_URL.'users/login');?>" method="post">
                     <div class="input-field">
-                        <input type="email" name="email" id="email"/>
+                        <input type="email" name="email" id="email" class=" validate 
+                    <?php echo (!empty($data['email']))? 'is-invalid' : '';?>"
+                    value="<?php echo($data['email']);?>"/>
                         <label for="email">Email Address</label>
                         <span class="invalid-feedback red-text"><?php echo($data['email_err']); ?></span>
                     </div>
                     <div class="input-field">
-                        <input type="password" name="password" id="password"/>
+                        <input type="password" name="password" id="password" class=" validate 
+                    <?php echo (!empty($data['password']))? 'is-invalid' : '';?>"
+                    value="<?php echo($data['password']);?>"/>
                         <label for="password">Password</label>
                         <span class="invalid-feedback red-text"><?php echo($data['password_err']); ?></span>
                     </div>

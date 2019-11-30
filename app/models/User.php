@@ -44,14 +44,12 @@ class User extends Database{
         return false;
     }
 
-    public function login(array $data):boolval
+    public function login(array $data):bool
     {
-       $this->sql = '';
+       $this->sql = 'SELECT * FROM users WHERE email=:email';
        $this->query($this->sql);
-       $this->execute([
-            'email' => $data['email'],
-            'password' => $data['password']
-       ]);
+       $this->bind(':email',$data['email']);
+       $this->execute();
        $row = $this->Fetch();
        $password_hash = $row->password;
        if(password_verify($data['password'],$password_hash)){

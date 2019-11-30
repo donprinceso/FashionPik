@@ -30,18 +30,18 @@
 <!-- mobile view -->
 <ul class=" sidenav" id="mobile-links">
     <li class=" active">
-        <a href="#">Home</a>
+        <a href="<?php echo SITE_URL."pages/index"?>">Home</a>
     </li>
     <li class="">
-            <a href="">About</a>
+            <a href="<?php echo SITE_URL."pages/about"?>">About</a>
         </li>
         <li>
-            <a href="">Features</a>
+            <a href="<?php echo SITE_URL."pages/features"?>">Features</a>
         </li>
         <li class="">
-            <a href="">Contact</a>
+            <a href="<?php echo SITE_URL."pages/contact"?>">Contact</a>
         </li>
         <li class="">
-            <a href="">Log In</a>
+            <a href="<?php echo SITE_URL."users/login"?>">Log In</a>
         </li>
 </ul>
