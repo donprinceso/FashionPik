@@ -27,32 +27,6 @@
             <?php else: ?>
                 <div class=" container center-align teal-text title">No Product in this site for now come back later</div>
             <?php endif; ?>
-            <!-- <div class="card col s12 l4 z-depth-2">
-                <div class="card-image">
-                    <img src="<?php echo SITE_URL;?>public/img/shoe.jpg">
-                    <h5 class="card-title teal-text">Shoe May</h5>
-                </div>
-                <div class="card-action">
-                    <a>Prize:<span>$3000</span></a>
-                    <div class="right">
-                        <a href="#" class="btn btn-small">Buy</a>
-                        <a href="#" class="btn btn-small">View</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s12 l4 z-depth-2">
-                <div class="card-image">
-                    <img src="<?php echo SITE_URL;?>public/img/shoe.jpg">
-                    <h5 class="card-title teal-text">Shoe May</h5>
-                </div>
-                <div class="card-action">
-                    <a>Prize:<span>$3000</span></a>
-                    <div class="right">
-                        <a href="#" class="btn btn-small">Buy</a>
-                        <a href="#" class="btn btn-small">View</a>
-                    </div>
-                </div>
-            </div> -->
             
         </div>
     </main>

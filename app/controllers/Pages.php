@@ -16,6 +16,7 @@ class Pages extends Controller
     protected $Page;
     public function __construct(Type $var = null) {
         $this->Page = $this->model('Page');
+        $this->ProductModel = $this->model('Product');
     }
 
     public function index()
@@ -34,6 +35,16 @@ class Pages extends Controller
     }
     public function features()
     {
-        $this->view('home/features');
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+            if(isset($_POST['features'])){
+                $data = $this->ProductModel->findAll();
+                $this->view('users/features',$data);
+            }
+       }else{
+           $data = [];
+           $this->view('home/features',$data);
+       }
+        
     }
 }
