@@ -7,11 +7,10 @@
  */
 // composer Autoloader
 
-
+require_once 'helper/Session.php';
 require_once 'config/config.php';
 require_once 'config/Database.php';
 require_once 'helper/Token.php';
-require_once 'helper/Session.php';
 require_once 'helper/Redirect.php';
 
 // require_once 'core/Controller.php';

@@ -5,13 +5,13 @@ class Product extends Database{
 
    public function create(array $data):bool
    {
-        $this->sql = "INSERT INTO `products`(`id`, `name`, `distribution`, `price`, `category`, `created_at`, `updated_at`) 
-        VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])";
+        $this->sql = "INSERT INTO `products`( `name`, `distribution`, `price`, `category`,`image`) 
+        VALUES (:name,:distribution,:price,:category,:image)";
         $this->query($this->sql);
-        $this->bind("",$data['']);
-        $this->bind("",$data['']);
-        $this->bind("",$data['']);
-        $this->bind("",$data['']);
+        $this->bind(":name",$data['name']);
+        $this->bind(":distribution",$data['distribution']);
+        $this->bind(":price",$data['price']);
+        $this->bind(":image",$data['image']);
         if($this->execute()){
             return true;
         }
@@ -23,10 +23,10 @@ class Product extends Database{
     $this->sql = "UPDATE `products` SET `name`=:name,`distribution`=:distribution,`price`=:price,
     `category`=:category WHERE 1";
     $this->query($this->sql);
-    $this->bind("",$data['']);
-    $this->bind("",$data['']);
-    $this->bind("",$data['']);
-    $this->bind("",$data['']);
+    $this->bind(":name",$data['name']);
+    $this->bind(":distribution",$data['distribution']);
+    $this->bind(":price",$data['price']);
+    $this->bind(":image",$data['image']);
     if($this->execute()){
         return true;
     }
@@ -46,7 +46,7 @@ class Product extends Database{
 
    public function findById($id)
    {
-    $this->sql = "";
+    $this->sql = "SELECT * FROM `products` ORDER BY ID LIMIT = 1 ASC";
     $this->query($this->sql);
     $this->bind(":id",$id);
     $row = $this->Fetch();
@@ -58,11 +58,13 @@ class Product extends Database{
 
    public function findAll()
    {
-       $this->sql = "";
+       $this->sql = "SELECT * FROM `products` ORDER BY ID ASC";
        $this->query($this->sql);
-       $row = $this->FetchAll();
-       if($this->rowCount >= 1){
-           return $row;
+       if($this->rowCount() >= 0){
+        $row = $this->FetchAll();
+        return $row;
        }
+      
    }
+   
 }

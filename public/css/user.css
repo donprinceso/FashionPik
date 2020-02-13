@@ -1,0 +1,25 @@
+.nav-wrapper{
+    height: 50px !important;
+}
+main{
+    margin-left: 269px;
+}
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .logo{
+  
+    line-height: 50px !important;
+}
+.sidenav{
+    width: 267px !important;
+}
+.brand-logo{
+    display: none !important;
+}
+@media screen and (max-width:970px){
+    main{
+        margin-left: 0px;
+    }
+    .brand-logo{
+        display: block !important;
+    }
+}
+    

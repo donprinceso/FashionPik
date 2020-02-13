@@ -34,7 +34,7 @@
                     <label for="password"> password</label>
                     <span class=" invalid-feedback red-text"><?php echo($data['password_err']); ?></span>
                 </div>
-                <p class="left"><a class="teal-text" href="<?php echo SITE_URL."users/login" ?>">
+                <p class="left"><a class="teal-text" href="<?php echo SITE_URL."/users/login" ?>">
                 <i class=" material-icons prefix">unlock</i>login</a></p>
                 <button type="submit" class="btn waves-effect waves-darken-4 right"> 
                     <i class="material-icons prefix">lock</i>

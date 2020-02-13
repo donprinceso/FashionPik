@@ -26,7 +26,7 @@
                         <label for="password">Password</label>
                         <span class="invalid-feedback red-text"><?php echo($data['password_err']); ?></span>
                     </div>
-                    <p class="right"><a class="teal-text" href="<?php echo SITE_URL.'users/register' ?>">Register</a></p>
+                    <p class="right"><a class="teal-text" href="<?php echo SITE_URL.'/users/register' ?>">Register</a></p>
                     <button type="submit" name="login" class="btn btn-block">login</button>
                 </form>
             </div>

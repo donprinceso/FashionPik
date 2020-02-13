@@ -16,17 +16,9 @@ class Users extends Controller
     }
 
     public function index(){
-        $data = [];
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-            if(isset($_POST['index'])){
-                $data = $this->ProductModel->findAll();
-                $this->view('users/index',$data);
-            }
-       }else{
-           //$data = [];
-            $this->view('users/index',$data);
-        }
+        
+        $data = $this->ProductModel->findAll();
+        $this->view('users/index',$data );
         
     }
 
@@ -70,7 +62,7 @@ class Users extends Controller
                     if($request){
                       $this->view('users/login',$data);
                     }else{
-                        echo "<script> alert: Registation Failled</script>";
+                        echo " alert('Registation Failled')";
                     }  
                 }else{
                     $this->view('users/register',$data);
@@ -125,8 +117,8 @@ class Users extends Controller
                 
                 $request = $this->userModel->login($data);
                 $_SESSION['email'] = $data['email'];
-                $_SESSION['message'] = 'Login was Successfully';
-                Redirect::to('users/Dashboard');
+               // $_SESSION['message'] = 'Login was Successfully';
+                Redirect::to('/users/index');
                 
             }else{
                 $this->view('users/login',$data);
@@ -147,7 +139,7 @@ class Users extends Controller
     public function logout()
     {
         if(session_destroy()){
-            Redirect::to('users/login');
+            Redirect::to('/users/login');
         }
     }
 

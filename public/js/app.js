@@ -4,5 +4,5 @@ $(document).ready(function(){
     $('.button-collapse').sideNav();
     $('.dropdown-trigger').dropdown();
     $('.collapsible').collapsible();
-    $('select').material_select();
+    $('select').formSelect();
 })
